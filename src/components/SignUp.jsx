@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router';
 import {firebaseApp} from "../firebase";
 
 
@@ -55,6 +56,10 @@ class SignUp extends Component
                 </div>
                 <div>
                     {this.state.error.message}
+                </div>
+
+                <div>
+                    <Link to={'/signin'}>Sign In instead</Link>
                 </div>
 
             </div>
