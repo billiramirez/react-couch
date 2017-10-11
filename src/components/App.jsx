@@ -4,6 +4,7 @@ import { firebaseApp} from "../firebase";
 import AddGoal from './AddGoal';
 import GoalList  from './GoalList';
 
+
 class App extends Component
 {
 
@@ -13,11 +14,14 @@ class App extends Component
     }
     render(){
         return (
-            <div>
+            <div style={{margin: '5px'}}>
 
-                <h3>Goals</h3>
+                <h3>Coach</h3>
                 <AddGoal />
+                <hr/>
+                <h4>Goals</h4>
                 <GoalList />
+                <hr/>
                 <button
                     className="btn btn-danger"
                     onClick={()=> this.signOut()}
@@ -31,7 +35,7 @@ class App extends Component
 }
 
 function mapStateToProps(state){
-    console.log('state: ', state);
+    // console.log('state: ', state);
     return {}
 }
 
